@@ -1,2 +1,5 @@
 <resources>
+    <string name="next_button">Next</string>
+    <string name="text_header">Message Received</string>
+    <string name="editText_main">Type message</string>
 </resources>
