@@ -7,35 +7,36 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.sun.android.databinding.ActivitySecondaryBinding
 
 
 class SecondaryActivity : AppCompatActivity() {
-    private val editText : EditText by lazy { findViewById(R.id.editText_second) }
+    private lateinit var binding : ActivitySecondaryBinding
+
     companion object {
         const val EXTRA_REPLY = "com.sun.android.extra.REPLY"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_secondary)
-        val intent = intent
 
+        binding = ActivitySecondaryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val intent = intent
         val message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE)
-        val textView : TextView = findViewById(R.id.text_message)
-        textView.text = message
+
+        binding.textMessage.text = message
     }
 
     // call back for reply button
     fun returnReply(view: View) {
-        // Get EditText text
-        val mReply = editText.text.toString()
+        val mReply = binding.editTextSecond.text.toString()
 
-        // put extra in intent
         val intent = Intent()
         intent.putExtra(EXTRA_REPLY, mReply)
         intent.putExtra(MainActivity.REQUEST_CODE, MainActivity.TEXT_REQUEST)
 
-        // set result
         setResult(RESULT_OK, intent)
         // finish to start main activity
         finish()
