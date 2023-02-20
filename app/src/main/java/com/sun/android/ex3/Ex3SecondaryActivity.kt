@@ -1,17 +1,14 @@
-package com.sun.android
+package com.sun.android.ex3
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.sun.android.databinding.ActivitySecondaryBinding
 
 
-class SecondaryActivity : AppCompatActivity() {
-    private lateinit var binding : ActivitySecondaryBinding
+class Ex3SecondaryActivity : AppCompatActivity() {
+    private val binding by lazy { ActivitySecondaryBinding.inflate(layoutInflater) }
 
     companion object {
         const val EXTRA_REPLY = "com.sun.android.extra.REPLY"
@@ -19,12 +16,10 @@ class SecondaryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivitySecondaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val intent = intent
-        val message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE)
+        val message = intent.getStringExtra(Ex3MainActivity.EXTRA_MESSAGE)
 
         binding.textMessage.text = message
     }
@@ -35,7 +30,7 @@ class SecondaryActivity : AppCompatActivity() {
 
         val intent = Intent()
         intent.putExtra(EXTRA_REPLY, mReply)
-        intent.putExtra(MainActivity.REQUEST_CODE, MainActivity.TEXT_REQUEST)
+        intent.putExtra(Ex3MainActivity.REQUEST_CODE, Ex3MainActivity.TEXT_REQUEST)
 
         setResult(RESULT_OK, intent)
         // finish to start main activity
