@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sun.android">
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="https" />
+        </intent>
+
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +21,16 @@
         android:theme="@style/Theme.Structure_Android"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ex6.FragmentExample2Activity"
+            android:exported="false">
+            
+        </activity>
+        <activity
+            android:name=".ex6.FragmentExample1Activity"
+            android:exported="false">
+            
+        </activity>
+        <activity
             android:name=".NavigationActivity"
             android:exported="true">
             <intent-filter>
@@ -19,18 +39,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            
         </activity>
         <activity
             android:name=".ex5.Ex5MainActivity"
             android:exported="false"
             android:label="Ex4"
             android:parentActivityName=".NavigationActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sun.android.NavigationActivity" />
@@ -40,9 +56,7 @@
             android:exported="false"
             android:label="Second Activity"
             android:parentActivityName=".ex3.Ex3MainActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sun.android.ex3.Ex3MainActivity" />
@@ -51,13 +65,5 @@
             android:name=".ex3.Ex3MainActivity"
             android:exported="false" />
     </application>
-
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <data android:scheme="https" />
-        </intent>
-        <package android:name="com.google.android.apps.maps" />
-    </queries>
 
 </manifest>
