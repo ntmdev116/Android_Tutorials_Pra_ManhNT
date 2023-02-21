@@ -2,6 +2,7 @@ plugins {
     id(Plugins.android_application)
     kotlin(Plugins.kotlin_android)
     id(Plugins.detekt).version(Versions.detekt)
+//    id("org.jetbrains.kotlin.android")
     jacoco
 }
 
@@ -47,6 +48,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -170,6 +175,9 @@ dependencies {
     implementation(Deps.appcompat)
     implementation(Deps.material)
     implementation(Deps.constraint_layout)
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)

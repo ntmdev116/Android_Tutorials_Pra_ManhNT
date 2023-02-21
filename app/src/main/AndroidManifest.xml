@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android">
         <activity
-            android:name="com.sun.android.MainActivity"
+            android:name=".SecondaryActivity"
+            android:exported="false"
+            android:label="Second Activity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sun.android.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
