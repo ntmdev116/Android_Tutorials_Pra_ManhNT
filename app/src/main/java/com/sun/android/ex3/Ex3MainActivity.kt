@@ -1,20 +1,16 @@
-package com.sun.android
+package com.sun.android.ex3
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.sun.android.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
-    private val LOG_TAG = MainActivity::class.java.simpleName
+class Ex3MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     companion object {
         const val TEXT_REQUEST = 1
@@ -25,8 +21,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
@@ -39,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             if (requestCode == TEXT_REQUEST)
             {
-                val reply = data.getStringExtra(SecondaryActivity.EXTRA_REPLY)
+                val reply = data.getStringExtra(Ex3SecondaryActivity.EXTRA_REPLY)
                 binding.textHeaderReply.apply { visibility = View.VISIBLE }
                 binding.textMessageReply.apply {
                     visibility = View.VISIBLE
@@ -53,7 +47,7 @@ class MainActivity : AppCompatActivity() {
     fun launchSecondaryActivity(view: View) {
         val message : String = binding.editTextMain.text.toString()
 
-        val intent = Intent(this, SecondaryActivity::class.java)
+        val intent = Intent(this, Ex3SecondaryActivity::class.java)
         intent.putExtra(EXTRA_MESSAGE, message)
 
         startForResult.launch(intent)
