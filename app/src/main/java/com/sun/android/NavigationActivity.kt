@@ -9,6 +9,7 @@ import com.sun.android.ex3.Ex3MainActivity
 import com.sun.android.ex5.Ex5MainActivity
 import com.sun.android.ex6.FragmentExample1Activity
 import com.sun.android.ex6.FragmentExample2Activity
+import com.sun.android.ex8.ScoreKeeperActivity
 import com.sun.android.models.NavigationActivityData
 
 class NavigationActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class NavigationActivity : AppCompatActivity() {
         NavigationActivityData("Ex5", Ex5MainActivity::class.java),
         NavigationActivityData("Ex6-1", FragmentExample1Activity::class.java),
         NavigationActivityData("Ex6-2", FragmentExample2Activity::class.java),
+        NavigationActivityData("Ex8", ScoreKeeperActivity::class.java),
     )
 
     private val adapter = ActivityListAdapter().also {
