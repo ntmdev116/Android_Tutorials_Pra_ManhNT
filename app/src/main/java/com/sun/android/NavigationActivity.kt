@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sun.android.adapters.ActivityListAdapter
 import com.sun.android.databinding.ActivityNavigationBinding
+import com.sun.android.ex10.TabExperimentActivity
 import com.sun.android.ex3.Ex3MainActivity
 import com.sun.android.ex5.Ex5MainActivity
 import com.sun.android.ex6.FragmentExample1Activity
@@ -23,6 +24,7 @@ class NavigationActivity : AppCompatActivity() {
         NavigationActivityData("Ex6-2", FragmentExample2Activity::class.java),
         NavigationActivityData("Ex8", ScoreKeeperActivity::class.java),
         NavigationActivityData("Ex9", MenuExampleActivity::class.java),
+        NavigationActivityData("Ex10", TabExperimentActivity::class.java),
     )
 
     private val adapter = ActivityListAdapter().also {
