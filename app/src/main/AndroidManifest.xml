@@ -29,6 +29,13 @@
             android:exported="false">
         </activity>
         <activity
+            android:name=".ex10.TabExperimentActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sun.android.NavigationActivity" />
+        </activity>
+        <activity
             android:name=".ex6.FragmentExample2Activity"
             android:exported="false" />
         <activity
