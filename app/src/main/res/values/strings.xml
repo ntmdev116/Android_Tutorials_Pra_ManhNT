@@ -68,5 +68,10 @@
     <string name="no_results">"No Results Found"</string>
     <string name="no_search_term">Please enter a search term</string>
     <string name="no_network">Please check your network connection and try again.</string>
+    <string name="send_broadcast">Send broadcast</string>
+    <string name="unknown_intent_action">unknown itent action</string>
+    <string name="power_connected">power connected</string>
+    <string name="power_disconnected">power disconnected!</string>
+    <string name="custom_receiver">custom receiver</string>
 
 </resources>
