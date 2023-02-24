@@ -12,6 +12,10 @@
         <package android:name="com.google.android.apps.maps" />
     </queries>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +24,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ex13.SimpleApiUsingActivity"
+            android:exported="false">
+        </activity>
         <activity
             android:name=".ex12.SimpleAsyncTaskActivity"
             android:exported="false">
