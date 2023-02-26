@@ -9,6 +9,7 @@ import com.sun.android.ex10.TabExperimentActivity
 import com.sun.android.ex12.SimpleAsyncTaskActivity
 import com.sun.android.ex13.SimpleApiUsingActivity
 import com.sun.android.ex14.SimplePowerReceiverActivity
+import com.sun.android.ex17.SimpleSharedPrefUsingActivity
 import com.sun.android.ex3.Ex3MainActivity
 import com.sun.android.ex5.Ex5MainActivity
 import com.sun.android.ex6.FragmentExample1Activity
@@ -31,6 +32,7 @@ class NavigationActivity : AppCompatActivity() {
         NavigationActivityData("Ex11", SimpleAsyncTaskActivity::class.java),
         NavigationActivityData("Ex13", SimpleApiUsingActivity::class.java),
         NavigationActivityData("Ex14", SimplePowerReceiverActivity::class.java),
+        NavigationActivityData("Ex17", SimpleSharedPrefUsingActivity::class.java),
     )
 
     private val adapter = ActivityListAdapter().also {
