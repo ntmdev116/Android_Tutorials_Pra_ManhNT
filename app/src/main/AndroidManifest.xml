@@ -12,6 +12,7 @@
         <package android:name="com.google.android.apps.maps" />
     </queries>
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,13 +22,18 @@
         android:theme="@style/Theme.Structure_Android"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ex9.MenuExampleActivity"
+            android:name=".ex20.SimpleNotificationActivity"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
+            android:name=".ex9.MenuExampleActivity"
+            android:exported="false"></activity>
+        <activity
             android:name=".ex8.ScoreKeeperActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".ex10.TabExperimentActivity"
             android:exported="false">

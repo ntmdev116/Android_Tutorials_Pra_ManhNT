@@ -52,11 +52,19 @@
     <string name="favorites">Favorites</string>
     <string name="alert">alert</string>
     <string name="date">Date</string>
-    
+
     <string name="alert_message">Click OK to continue, or Cancel to stop:</string>
     <string name="onOk">Pressed OK</string>
     <string name="ok">OK</string>
     <string name="onCancel">Pressed Cancel</string>
     <string name="cancel">Cancel</string>
+    <string name="notify_me">Notify me</string>
+    <string name="update_me">Update Notification</string>
+    <string name="cancel_me">Cancel Notification</string>
+    <string name="channel_name">Primary Channel</string>
+    <string name="channel_description">This is a simple channel</string>
+    <string name="notification_title">My notification</string>
+    <string name="notification_text">This is a simple notification</string>
+    <string name="notification_updated">My notification has updated</string>
 
 </resources>
