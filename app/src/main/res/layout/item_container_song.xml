@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/dp_10"
+    android:background="@drawable/ic_launcher_background"
+    android:layout_marginBottom="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/songImage"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_80"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp_2"
+            android:text="@string/title1"
+            android:textSize="@dimen/sp_22"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/songImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="@string/title1"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/songImage"
+            app:layout_constraintTop_toBottomOf="@+id/songName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,7 @@ import com.sun.android.ex13.SimpleApiUsingActivity
 import com.sun.android.ex14.SimplePowerReceiverActivity
 import com.sun.android.ex17.SimpleSharedPrefUsingActivity
 import com.sun.android.ex19.ContactListActivity
+import com.sun.android.ex22.screen.MusicPlayerActivity
 import com.sun.android.ex3.Ex3MainActivity
 import com.sun.android.ex5.Ex5MainActivity
 import com.sun.android.ex6.FragmentExample1Activity
@@ -35,6 +36,7 @@ class NavigationActivity : AppCompatActivity() {
         NavigationActivityData("Ex14", SimplePowerReceiverActivity::class.java),
         NavigationActivityData("Ex17", SimpleSharedPrefUsingActivity::class.java),
         NavigationActivityData("Ex19", ContactListActivity::class.java),
+        NavigationActivityData("Ex22", MusicPlayerActivity::class.java),
     )
 
     private val adapter = ActivityListAdapter().also {

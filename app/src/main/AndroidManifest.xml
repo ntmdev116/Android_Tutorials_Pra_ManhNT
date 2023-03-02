@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sun.android">
+    package="com.sun.android" >
 
     <queries>
         <intent>
@@ -16,6 +16,8 @@
     <uses-permission
         android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -32,10 +34,16 @@
 
         <activity
             android:name=".ex14.SimplePowerReceiverActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:exported="false" />
+        <service
+            android:name=".ex22.service.MusicPlayerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ex22.screen.MusicPlayerActivity"
+            android:exported="false"
+            android:launchMode="singleTop" >
         </activity>
         <activity
             android:name=".ex13.SimpleApiUsingActivity"
@@ -48,22 +56,19 @@
         <activity
             android:name=".ex17.SimpleSharedPrefUsingActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".ex19.ContactListActivity"
             android:exported="false" />
         <activity
             android:name=".ex9.MenuExampleActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ex8.ScoreKeeperActivity"
             android:exported="false" />
         <activity
             android:name=".ex10.TabExperimentActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sun.android.NavigationActivity" />
@@ -76,7 +81,7 @@
             android:exported="false" />
         <activity
             android:name=".NavigationActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -87,7 +92,7 @@
             android:name=".ex5.Ex5MainActivity"
             android:exported="false"
             android:label="Ex4"
-            android:parentActivityName=".NavigationActivity">
+            android:parentActivityName=".NavigationActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sun.android.NavigationActivity" />
@@ -96,7 +101,7 @@
             android:name=".ex3.Ex3SecondaryActivity"
             android:exported="false"
             android:label="Second Activity"
-            android:parentActivityName=".ex3.Ex3MainActivity">
+            android:parentActivityName=".ex3.Ex3MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sun.android.ex3.Ex3MainActivity" />

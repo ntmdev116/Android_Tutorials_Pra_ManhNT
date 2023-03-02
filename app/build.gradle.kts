@@ -180,6 +180,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.activity:activity-ktx:1.6.1")
+    implementation("com.google.android.exoplayer:exoplayer:2.18.3")
 
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
