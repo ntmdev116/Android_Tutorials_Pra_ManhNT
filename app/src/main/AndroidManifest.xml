@@ -21,6 +21,10 @@
         android:theme="@style/Theme.Structure_Android"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ex12.SimpleAsyncTaskActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".ex9.MenuExampleActivity"
             android:exported="false">
         </activity>
