@@ -82,5 +82,9 @@
     <string name="count_button">Count</string>
     <string name="reset_button">Reset</string>
     <string name="permission_denied_message">You denied us to read your contacts!!!</string>
+    <string name="allow">Allow</string>
 
+    <string name="permission_request_title">Permission needed</string>
+    <string name="permission_request_message">We need some permission to work properly</string>
+    <string name="permission_request_denied">You denied our required permission</string>
 </resources>
