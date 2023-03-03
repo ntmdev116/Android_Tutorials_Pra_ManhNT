@@ -52,7 +52,7 @@
     <string name="favorites">Favorites</string>
     <string name="alert">alert</string>
     <string name="date">Date</string>
-    
+
     <string name="alert_message">Click OK to continue, or Cancel to stop:</string>
     <string name="onOk">Pressed OK</string>
     <string name="ok">OK</string>
@@ -81,5 +81,6 @@
     <string name="default_count">0</string>
     <string name="count_button">Count</string>
     <string name="reset_button">Reset</string>
+    <string name="permission_denied_message">You denied us to read your contacts!!!</string>
 
 </resources>
