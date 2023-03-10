@@ -28,7 +28,7 @@ class MusicPlayerActivity : BaseActivity() {
     }
 
     private fun checkPermission(permission: String) {
-        if (ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
             permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
                 if (granted) {
                     addView()
